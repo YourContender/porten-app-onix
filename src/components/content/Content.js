@@ -20,9 +20,9 @@ class Content extends React.Component {
             result.push(database[Math.floor(Math.random() * (database.length - 1) + 1)])
         } 
 
-        return this.setState({
-            data: [...this.state.data, ...result]
-        })
+        return this.setState(({ data }) => ({
+            data: [...data, ...result]
+        }))
     }
 
     componentDidMount() {

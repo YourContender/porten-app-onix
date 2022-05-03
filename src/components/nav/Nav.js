@@ -13,11 +13,9 @@ class Nav extends React.Component {
             blockImg: [basket, search],
             active: false
         }
-
-        this.onActiveClass = this.onActiveClass.bind(this);
     }
 
-    onActiveClass(result) {
+    onActiveClass = (result) => {
         this.setState({active: result})
     }
 
