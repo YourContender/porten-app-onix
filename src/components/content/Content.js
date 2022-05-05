@@ -13,25 +13,31 @@ class Content extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.getRandomItems();
+    }
+
+    getRandomIndex = () => {
+        return Math.floor(Math.random() * (database.length - 1) + 1)
+    }
+
     getRandomItems = () => {
         let result = [];
 
-        for (let i = 0; i < 3; i++) {
-            result.push(database[Math.floor(Math.random() * (database.length - 1) + 1)])
-        } 
+        for (let i = 0; result.length < 3; i++) {
+            let elem = database[this.getRandomIndex()];
 
+            result = [...result, elem];
+        } 
+        
         return this.setState(({ data }) => ({
             data: [...data, ...result]
         }))
     }
 
-    componentDidMount() {
-        this.getRandomItems();
-    }
-
     render() {
         const { data } = this.state;
-
+    
         return (
             <section>
                 <div className="content">
@@ -44,7 +50,7 @@ class Content extends React.Component {
                         
                         <div className="content_season_list">
                             {
-                                data.map((item, i) => {
+                                data.map(item => {
                                     const { title, price } = item;
 
                                     return (
