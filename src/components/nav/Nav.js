@@ -3,6 +3,7 @@ import logoShop from '../../img/logo/logo-porten.png';
 import basket   from '../../img/logo/basket.png';
 import search   from '../../img/logo/search.png';
 import './Nav.sass';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
     constructor(props) {
@@ -28,19 +29,22 @@ class Nav extends React.Component {
                     <div className="container">
                         <div className="nav_block">
                             <div className="nav_block_logo">
-                                <img src={logoShop} alt="logo"/>
+                                <Link to='/'>
+                                    <img src={logoShop} alt="logo"/>
+                                </Link>
                             </div>
                             <div className={active ? "nav_block_link_active" : 'nav_block_link'}>
                                 {
                                     blockItem.map((item, i) => {
                                         return (
-                                            <div 
+                                            <Link
+                                                to='/list' 
                                                 className="block_item" 
                                                 key={i}
                                                 onClick={() => this.onActiveClass(false)}
                                             >
                                                 <span>{item}</span>
-                                            </div>
+                                            </Link>
                                         )
                                     })
                                 }

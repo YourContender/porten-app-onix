@@ -1,11 +1,8 @@
-import Header     from './components/header/Header';
-import Nav        from './components/nav/Nav';
-import Promo      from './components/promo/Promo';
-import Content    from './components/content/Content';
-import Features   from './components/features/Features';
-import Commercial from './components/commercial/Commercial';
-import Brands     from './components/brands/Brands';
-import Footer     from './components/footer/Footer';
+import { Routes, Route } from 'react-router-dom';
+import HomePage          from './pages/HomePage';
+import ListPage          from './pages/ListPage';
+import Header            from './components/header/Header';
+import Nav               from './components/nav/Nav';
 import './App.sass';
 
 function App() {
@@ -13,12 +10,10 @@ function App() {
         <>
             <Header/>
             <Nav/>
-            <Promo/>
-            <Content/>
-            <Features/>
-            <Commercial/>
-            <Brands/>
-            <Footer/>
+            <Routes>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='list' element={<ListPage/>}/>
+            </Routes>
         </>
     );
 }
