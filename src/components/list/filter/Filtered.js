@@ -20,7 +20,7 @@ class Filtered extends React.Component {
 
     render() {
         const { country } = this.state;
-        const { showModalWindow } = this.props;
+        const { showModalWindow, cancelFilterMethod } = this.props;
 
         return(
             <>
@@ -35,6 +35,7 @@ class Filtered extends React.Component {
                     <DropdownButton style={{ marginLeft: '5px' }} as={ButtonGroup} title="Сортировка" id="bg-1">
                         <Dropdown.Item eventKey="1" onClick={() => this.filterMethod('1')}>По нарастанию цены</Dropdown.Item>
                         <Dropdown.Item eventKey="2" onClick={() => this.filterMethod('2')}>По убыванию цены</Dropdown.Item>
+                        <Dropdown.Item eventKey="3" onClick={() => cancelFilterMethod()}>сброс фильтра</Dropdown.Item>
                     </DropdownButton>
 
                     <DropdownButton style={{ marginLeft: '5px' }} as={ButtonGroup} title="Страны" id="bg-2">
@@ -45,6 +46,7 @@ class Filtered extends React.Component {
                                 )
                             })
                         }
+                        <Dropdown.Item key={country.length + 1} onClick={() => cancelFilterMethod()}>сброс</Dropdown.Item>
                     </DropdownButton>
                 </ButtonGroup>
             </>

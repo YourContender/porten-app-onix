@@ -21,6 +21,13 @@ class ListProd extends React.Component {
         }))
     }
 
+    cancelFilterMethod = () => {
+        this.setState({
+            filtered: [...data],
+            showModal: false
+        })
+    }
+
     filteredPriceMethod = (id) => {
         this.setState(({filtered}) => ({
             filtered: [...filtered].sort((a, b) => (id == 1) ? (a.price - b.price) : (b.price - a.price))
@@ -29,11 +36,12 @@ class ListProd extends React.Component {
 
     filteredCountryMethod = (country) => {
         this.setState({
-            filtered: [...data]
+            filtered: [...data],
+            showModal: false
         })
 
         this.setState(({filtered}) => ({
-            filtered: [...filtered].filter(item => item.country === country)
+            filtered: filtered.filter(item => item.country === country)
         }))
     }
 
@@ -60,6 +68,7 @@ class ListProd extends React.Component {
                         showModalWindow={this.showModalWindow} 
                         filteredPriceMethod={this.filteredPriceMethod}
                         filteredCountryMethod={this.filteredCountryMethod} 
+                        cancelFilterMethod={this.cancelFilterMethod}
                     />
                 </div>
 

@@ -88,8 +88,7 @@ class ModalWindow extends React.Component {
 
 
                                 <Button 
-                                    variant="primary" 
-                                    // type="submit" 
+                                    variant="primary"
                                     style={{width: '200px', margin: '0 auto'}}
                                     onClick={() => this.onSubmit()}
                                 >
@@ -104,7 +103,6 @@ class ModalWindow extends React.Component {
                                 >
                                     Close
                                 </Button>
-                                <Button variant="primary">Save changes</Button>
                             </Modal.Footer>
                         </div>
                     </Modal.Dialog>
