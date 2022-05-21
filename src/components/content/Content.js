@@ -1,7 +1,6 @@
 import React            from "react";
 import watch            from '../../img/logo/watch.png';
 import { database }     from "../../database";
-import { v4 as uuidv4 } from 'uuid';
 import './Content.sass';
 
 class Content extends React.Component {
@@ -50,11 +49,11 @@ class Content extends React.Component {
                         
                         <div className="content_season_list">
                             {
-                                data.map(item => {
+                                data.map((item, i) => {
                                     const { title, price } = item;
 
                                     return (
-                                        <div className="item" key={uuidv4()}>
+                                        <div className="item" key={i}>
                                             <div className="block">
                                                 <img src={watch} alt="logo"/>
                                             </div>

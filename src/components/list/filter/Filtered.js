@@ -1,5 +1,6 @@
 import { Button, ButtonGroup, Dropdown, DropdownButton } from 'react-bootstrap';
 import React from 'react';
+import './Filtered.sass';
 
 class Filtered extends React.Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class Filtered extends React.Component {
                         Добавить
                     </Button>
 
-                    <DropdownButton style={{ marginLeft: '5px' }} as={ButtonGroup} title="Сортировка" id="bg-1">
+                    <DropdownButton className='filter_price' style={{ marginLeft: '5px' }} as={ButtonGroup} title="Сортировка" id="bg-1">
                         <Dropdown.Item eventKey="1" onClick={() => this.filterMethod('1')}>По нарастанию цены</Dropdown.Item>
                         <Dropdown.Item eventKey="2" onClick={() => this.filterMethod('2')}>По убыванию цены</Dropdown.Item>
                         <Dropdown.Item eventKey="3" onClick={() => cancelFilterMethod()}>сброс фильтра</Dropdown.Item>
@@ -42,7 +43,7 @@ class Filtered extends React.Component {
                         {
                             country.map((item, i) => {
                                 return (
-                                    <Dropdown.Item eventKey={i} key={i} onClick={() => this.filterCountryMethod(item)}>{item}</Dropdown.Item>
+                                    <Dropdown.Item  eventKey={i} key={i} onClick={() => this.filterCountryMethod(item)}>{item}</Dropdown.Item>
                                 )
                             })
                         }

@@ -38,7 +38,7 @@ class Nav extends React.Component {
                                     blockItem.map((item, i) => {
                                         return (
                                             <Link
-                                                to='/list' 
+                                                to={i === 0 ? '/list' : '/'} 
                                                 className="block_item" 
                                                 key={i}
                                                 onClick={() => this.onActiveClass(false)}

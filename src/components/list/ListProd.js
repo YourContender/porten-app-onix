@@ -72,16 +72,14 @@ class ListProd extends React.Component {
                     />
                 </div>
 
-                <div>
-                    <div className='list_items'>
-                        {
-                            filtered.map(item => {
-                                return(
-                                    <CardWatch item={item} key={item.id}/>
-                                )
-                            })
-                        }
-                    </div>
+                <div className='list_items'>
+                    {
+                        filtered.map(item => {
+                            return(
+                                <CardWatch item={item} key={item.id}/>
+                            )
+                        })
+                    }
                 </div>
             </div>
         )

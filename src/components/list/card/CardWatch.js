@@ -1,17 +1,25 @@
 import React from "react";
 import { Card, Button, ListGroupItem, ListGroup } from "react-bootstrap";
+import './CardWatch.sass';
 
-class CardWatch extends React.Component {
-    render() {
+class CardWatch extends React.Component { 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            test: ''
+        }
+    }
+
+
+    render () {
         const { url, title, description, price, currency, country } = this.props.item;
         const photoLink = typeof url === 'string' ? url : url.path + '.' + url.extension;
-        const initCurrency = currency ? currency : 'uah';
-        const initCountry = country ? country : 'Ukraine';
 
         return (
             <>
-                <Card style={{ width: '20rem', marginLeft: '15px', marginRight: '30px', marginTop: '55px' }}>
-                    <Card.Img style={{ height: '310px' }} variant="top" src={photoLink} />
+                <Card draggable={true} className="card_container" onClick={() => this.onActiveItem()}>
+                    <Card.Img className="card_img" variant="top" src={photoLink} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>
@@ -20,12 +28,15 @@ class CardWatch extends React.Component {
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroupItem><strong>Price: </strong>{price}</ListGroupItem>
-                        <ListGroupItem><strong>Currency: </strong>{initCurrency}</ListGroupItem> 
-                        <ListGroupItem><strong>Country: </strong>{initCountry}</ListGroupItem>
+                        <ListGroupItem className="card_descr">
+                            <strong className="card_descr_price">Price: </strong> {price}
+                        </ListGroupItem>
+                        <ListGroupItem><strong>Currency: </strong>{currency}</ListGroupItem> 
+                        
+                        <ListGroupItem><strong>Country: </strong>{country}</ListGroupItem>
                     </ListGroup>
                     <Card.Body>
-                        <Button variant="danger" style={{marginRight: '10px'}}>Удалить</Button>
+                        <Button variant="danger" className="delete_btn">Удалить</Button>
                         <Button variant="primary">Купить</Button>
                     </Card.Body>
                 </Card>
@@ -35,3 +46,4 @@ class CardWatch extends React.Component {
 }
 
 export default CardWatch;
+
