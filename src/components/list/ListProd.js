@@ -1,5 +1,5 @@
-import { data }    from '../../data';
 import React       from "react";
+import { data }    from '../../data';
 import ModalWindow from './modal-window/ModalWindow';
 import CardWatch   from './card/CardWatch';
 import Filtered    from './filter/Filtered';
@@ -51,6 +51,12 @@ class ListProd extends React.Component {
         }))
     }
 
+    removeItem = (id) => {
+        this.setState(({filtered}) => ({
+            filtered: filtered.filter(item => item.id !== id)
+        }))
+    }
+
     render() {
         const { showModal, filtered } = this.state;
 
@@ -76,7 +82,7 @@ class ListProd extends React.Component {
                     {
                         filtered.map(item => {
                             return(
-                                <CardWatch item={item} key={item.id}/>
+                                <CardWatch item={item} key={item.id} removeItem={this.removeItem}/>
                             )
                         })
                     }
