@@ -18,7 +18,6 @@ class CardWatch extends React.Component {
         })
     }
 
-
     render () {
         const { url, title, description, price, currency, country, id } = this.props.item;
         const photoLink = typeof url === 'string' ? url : url.path + '.' + url.extension;

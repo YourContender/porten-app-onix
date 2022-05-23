@@ -21,13 +21,7 @@ class Content extends React.Component {
     }
 
     getRandomItems = () => {
-        let result = [];
-
-        for (let i = 0; result.length < 3; i++) {
-            let elem = database[this.getRandomIndex()];
-
-            result = [...result, elem];
-        } 
+        let result = new Array(3).fill('').map(item => item = database[this.getRandomIndex()]);
         
         return this.setState(({ data }) => ({
             data: [...data, ...result]
