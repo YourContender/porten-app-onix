@@ -45,29 +45,58 @@ class ModalWindow extends React.Component {
                             <Row className="mb-3, ml-3">
                                 <div className="modal_form_container">
                                     <span className='modal_form_text'>Enter title: </span>
-                                    <input className='modal_form_input' name='title' onChange={this.handleInput} type="text" placeholder="enter title"/>
+                                    <input 
+                                        className='modal_form_input' 
+                                        name='title' 
+                                        onChange={this.handleInput} 
+                                        type="text" 
+                                        placeholder="enter title"
+                                    />
                                 </div>
 
                                 <div className="modal_form_container">
                                     <span className='modal_form_text'>Enter price: </span>
-                                    <input className='modal_form_input' name='price' onChange={this.handleInput} type="text" placeholder="enter price"/>
+                                    <input 
+                                        className='modal_form_input' 
+                                        name='price' 
+                                        onChange={this.handleInput} 
+                                        type="text" 
+                                        placeholder="enter price"
+                                    />
                                 </div>
 
                                 <div className="modal_form_container">
                                     <span className='modal_form_text'>Enter description: </span>
-                                    <input className='modal_form_input' name='description' onChange={this.handleInput} type="text" placeholder="enter description"/>
+                                    <input 
+                                        className='modal_form_input' 
+                                        name='description' 
+                                        onChange={this.handleInput} 
+                                        type="text" 
+                                        placeholder="enter description"
+                                    />
                                 </div>
 
                                 <div className="modal_form_container">
                                     <span className='modal_form_text'>Enter url: </span>
-                                    <input className='modal_form_input' name='url' onChange={this.handleInput} type="text" placeholder="enter url photo"/>
+                                    <input 
+                                        className='modal_form_input' 
+                                        name='url' 
+                                        onChange={this.handleInput} 
+                                        type="text" 
+                                        placeholder="enter url photo"
+                                    />
                                 </div>
                             </Row>
 
                             <Row className="mb-3">
                                 <Form.Group controlId="form-5">
                                     <Form.Label><p className='modal_form_choose'>Choose currency</p></Form.Label>
-                                    <Form.Select style={{width: '80%', margin: '0 auto'}} name='currency' onChange={this.handleInput} defaultValue="Choose currency">
+                                    <Form.Select 
+                                        style={{width: '80%', margin: '0 auto'}} 
+                                        name='currency' 
+                                        onChange={this.handleInput} 
+                                        defaultValue="Choose currency"
+                                    >
                                         <option>UAH</option>
                                         <option>USD</option>
                                         <option>EUR</option>
@@ -76,7 +105,12 @@ class ModalWindow extends React.Component {
 
                                 <Form.Group controlId="form-6">
                                     <Form.Label><p className='modal_form_choose'>Choose country</p></Form.Label>
-                                    <Form.Select style={{width: '80%', margin: '0 auto'}} name='country' onChange={this.handleInput} defaultValue="Choose country">
+                                    <Form.Select 
+                                        style={{width: '80%', margin: '0 auto'}} 
+                                        name='country' 
+                                        onChange={this.handleInput} 
+                                        defaultValue="Choose country"
+                                    >
                                         <option>Ukraine</option>
                                         <option>Poland</option>
                                         <option>United Kingdom</option>
