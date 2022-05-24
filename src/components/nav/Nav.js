@@ -10,7 +10,11 @@ class Nav extends React.Component {
         super(props);
 
         this.state = {
-            blockItem: ['Понравилось', 'Личный кабинет', 'Настройки'],
+            blockItem: [
+                {value: 'Понравилось', id: 12},
+                {value: 'Личный кабинет', id: 13},
+                {value: 'Настройки', id: 14}
+            ],
             blockImg: [basket, search],
             active: false
         }
@@ -35,15 +39,15 @@ class Nav extends React.Component {
                             </div>
                             <div className={active ? "nav_block_link_active" : 'nav_block_link'}>
                                 {
-                                    blockItem.map((item, i) => {
+                                    blockItem.map(item => {
                                         return (
                                             <Link
-                                                to={i === 0 ? '/list' : '/'} 
+                                                to={item.id === 12 ? '/list' : '/'} 
                                                 className="block_item" 
-                                                key={i}
+                                                key={item.id}
                                                 onClick={() => this.onActiveClass(false)}
                                             >
-                                                <span>{item}</span>
+                                                <span>{item.value}</span>
                                             </Link>
                                         )
                                     })
