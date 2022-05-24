@@ -1,4 +1,4 @@
-import ListProd from "../components/list/ListProd";
+import ListProd from "../components/List/ListProd";
 
 function ListPage() {
     return (
