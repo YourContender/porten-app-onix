@@ -7,7 +7,8 @@ class CardWatch extends React.Component {
         super(props);
 
         this.state = {
-            test: ''
+            test: '',
+            id: this.props.item.id
         }
     }
 
@@ -19,13 +20,24 @@ class CardWatch extends React.Component {
     }
 
     render () {
-        const { url, title, description, price, currency, country, id } = this.props.item;
+        const { url, title, description, price, currency, country, id} = this.props.item;
+        const { dragStartHandler, dragEndHandler, dragOverHandler, dropHandler } = this.props;
+        const item = this.props.item;
         const photoLink = typeof url === 'string' ? url : url.path + '.' + url.extension;
         const active = this.state.test ? "test_active" : '';
 
         return (
             <div className={active}>
-                <Card draggable={true} className="card_container" onClick={() => this.onActiveItem(id)}>
+                <Card 
+                    onDragStart={() => dragStartHandler(item)}
+                    onDragLeave={() => dragEndHandler()}
+                    onDragEnd={() => dragEndHandler()}
+                    onDragOver={(e) => dragOverHandler(e, item)}
+                    onDrop={(e) => dropHandler(e, item)}
+                    draggable={true}
+                    className="card_container" 
+                    onClick={() => this.onActiveItem(id)}
+                >
                     <Card.Img className="card_img" variant="top" src={photoLink} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>

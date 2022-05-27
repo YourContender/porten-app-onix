@@ -1,6 +1,7 @@
 export const data = [
     {
         id: 1,
+        order: 1,
         title: 'AMST AM 3003 silver',
         url: {
             path: 'https://img.klubok.com/img/used/2017/01/03/12016/12016353_6',
@@ -14,6 +15,7 @@ export const data = [
     },
     {
         id: 2,
+        order: 2,
         title: 'Lige LG9899 Gold',
         url: {
             path: 'https://content1.rozetka.com.ua/goods/images/big/16845485',
@@ -27,6 +29,7 @@ export const data = [
     },
     {
         id: 3,
+        order: 3,
         title: 'LIGE 9899',
         url: {
             path: 'https://raff.com.ua/image/cache/catalog/lege/9899/LIGE-9899-4-650x650',
@@ -40,6 +43,7 @@ export const data = [
     },
     {
         id: 4,
+        order: 4,
         title: 'Skmei Femino sport',
         url: {
             path: 'https://cdn0.sellbe.com/p4/s-4102/product4/4361/713643',
@@ -53,6 +57,7 @@ export const data = [
     },
     {
         id: 5,
+        order: 5,
         title: 'AddiesDive NH35-200М',
         url: {
             path: 'https://cdn0.sellbe.com/p4/s-4102/product4/4238/502281',
@@ -66,6 +71,7 @@ export const data = [
     },
     {
         id: 6,
+        order: 6,
         title: 'AddiesDiveNext NH55-400М',
         url: {
             path: 'https://www.casio-europe.com/resource/images/watch/zoom/PRG-240-1ER',
@@ -79,6 +85,7 @@ export const data = [
     },
     {
         id: 7,
+        order: 7,
         title: 'CASIO GA-2100-1A1ER',
         url: {
             path: 'https://shatel.ua/image/cache/catalog/products/pe417/pe417--468x638.jpg.pagespeed.ce.clvFsM0QKk',
@@ -92,6 +99,7 @@ export const data = [
     },
     {
         id: 8,
+        order: 8,
         title: 'Skmei Champion 1243A',
         url: {
             path: 'https://images.prom.ua/2576424110_w600_h600_2576424110',
@@ -105,6 +113,7 @@ export const data = [
     },
     {
         id: 9,
+        order: 9,
         title: 'SKMEI Men 7578-HDM',
         url: {
             path: 'https://ae04.alicdn.com/kf/H6cfca204807b49b589819e47a19d16143/SKMEI',
@@ -118,6 +127,7 @@ export const data = [
     },
     {
         id: 10,
+        order: 10,
         title: 'SKMEI 1025-KMA',
         url: {
             path: 'https://sc01.alicdn.com/kf/H5959ba192759441abbb2438ea398e95aZ/232376339/H5959ba192759441abbb2438ea398e95aZ',
@@ -131,6 +141,7 @@ export const data = [
     },
     {
         id: 11,
+        order: 11,
         title: 'Heimdallr Seiko Monster',
         url: {
             path: 'https://ae03.alicdn.com/kf/Hd860ca89294248eaae5d21c45b82ad90h',
@@ -144,6 +155,7 @@ export const data = [
     },
     {
         id: 12,
+        order: 12,
         title: 'Tevise 5 series',
         url: {
             path: 'https://images.prom.ua/3020779220_w640_h640_mehanicheskie-chasy-s',

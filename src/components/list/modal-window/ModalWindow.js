@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 class ModalWindow extends React.Component {
     constructor(props) {
         super(props);
-
+        console.log(this.props.order);
         this.state = {
             title: '',
             price: 0,
@@ -14,7 +14,8 @@ class ModalWindow extends React.Component {
             url: '',
             currency: !('') && 'uah',
             country: !('') &&'Ukraine',
-            id: uuidv4()
+            id: uuidv4(),
+            order: +this.props.order + 1
         }
     }
 
@@ -113,7 +114,7 @@ class ModalWindow extends React.Component {
                                     >
                                         <option>Ukraine</option>
                                         <option>Poland</option>
-                                        <option>United Kingdom</option>
+                                        <option>UK</option>
                                         <option>USA</option>
                                         <option>Canada</option>
                                     </Form.Select>
