@@ -11,7 +11,8 @@ export const data = [
         description: 'Армейские наручные часы. Стальной корпус и циферблат модели сделаны в классическом стиле',
         price: 10000,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 2,
@@ -25,7 +26,8 @@ export const data = [
         description: 'Наручные мужские часы бренда LIGE LG9899 отличаются своей прочностью и качеством. Стальной корпус и циферблат модели сделаны в классическом стиле',
         price: 7200,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 3,
@@ -39,7 +41,8 @@ export const data = [
         description: 'LIGE 9899 - это новинка которая вошла в топ продаж данного производителя. Брутальный внешний вид, качественная сборка, точный кварцевый механизм',
         price: 7400,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 4,
@@ -53,7 +56,8 @@ export const data = [
         description: 'Мужские наручные часы Skmei Femino спортивные электронные с подсветкой. Доставка по Украине',
         price: 3500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 5,
@@ -67,7 +71,8 @@ export const data = [
         description: 'Продажа смартфонов, планшетов, часов с доставкой по Украине. Доступные, низкие цены. Заказать, купить, приобрести оригинальные смартфоны Xiaomi, OPPO, VIVO, Huawei, Asus, Nokia, Meizu, Oukitel, Blackview.Точные характеристики и обзоры смартфоно',
         price: 5500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 6,
@@ -81,7 +86,8 @@ export const data = [
         description: 'Параметры продукта Модель часов: MY-H9 Тип механизма: автоматический механический механизм (двухсторонняя Автоматическая обмотка)',
         price: 6500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 7,
@@ -95,7 +101,8 @@ export const data = [
         description: '',
         price: 7500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 8,
@@ -109,7 +116,8 @@ export const data = [
         description: 'Бренд Skmei стал одним из лидеров продаж в Европе за 2019-й год. Основным преимуществом бренда является высокое качество при очень приемлемой цене',
         price: 10500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 9,
@@ -123,7 +131,8 @@ export const data = [
         description: 'Спортивные цифровые часы, мужские электронные светодиодные часы с хронографом, мужские часы с коробкой, модные водонепроницаемые наручные часы',
         price: 2500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 10,
@@ -137,7 +146,8 @@ export const data = [
         description: 'Простые спортивные часы Мужчины Военные часы Будильник Ударопрочный водонепроницаемые цифровые часы',
         price: 2500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 11,
@@ -151,7 +161,8 @@ export const data = [
         description: 'Механические часы Heimdallr NH36A Monster, мужские часы для дайверов, автоматические с сапфировым стеклом, ЛЮМ C3 (люминофор)',
         price: 20500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     },
     {
         id: 12,
@@ -165,7 +176,8 @@ export const data = [
         description: 'Данная модель часов Tevise - механическая с автоподзаводом. Преимуществом часов с автоподзаводом является то, что при встряхивании часов маятник',
         price: 20500,
         currency: 'uah',
-        availability: true
+        availability: true,
+        active: false
     }
 ]
 
