@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 class ModalWindow extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.order);
+        
         this.state = {
             title: '',
             price: 0,
