@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 class ModalWindow extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             title: '',
             price: 0,
@@ -127,7 +127,7 @@ class ModalWindow extends React.Component {
                                 className='modal_btn'
                                 onClick={() => this.onSubmit()}
                             >
-                                Submit
+                                Submit test
                             </Button>
                         </Form>
 
